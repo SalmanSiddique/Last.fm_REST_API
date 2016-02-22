@@ -1,0 +1,38 @@
+<!--http://omega.uta.edu/~svs5361/project1/music.html-->
+<!DOCTYPE html>
+<!-- Student Name: Salman Vazirali Siddique   -->
+<html lang="en">
+  <head>
+    <title>A Music Web Application</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="music.js"></script>
+	<style>
+     table,th,td
+     {
+         border:1px solid black;
+     }
+    </style>
+  </head>
+  <body>
+    <form>
+       <label>Enter the name of the artist: <input type="text" id="form-input"/></label>
+       <input type="button" onclick="sendRequest('artist.getinfo');" value="Display Biography and Picture"/>
+	   <input type="button" onclick="sendRequest('artist.getTopAlbums');" value="Display Top Albums"/>
+	   <input type="button" onclick="sendRequest('artist.getEvents');" value="Display Events"/><br/><br/>
+  <table border="2" style="width:100%" cellpadding="10">
+  <tr>
+    <th>Artist Biography</th>
+    <th>Artist Picture</th> 
+    <th>Top Albums</th>
+    <th>Upcoming Events</th>
+  </tr>
+  <tr>
+    <td id="arname" valign="top" width="400"></td>
+    <td id="arpic" valign="top" align="center" width="150"></td> 
+	<td id="alb" width="400"></td>
+	<td id="upcevnt" valign="top" width="400"></td>
+  </tr>
+</table>
+	</form>
+  </body>
+</html>
